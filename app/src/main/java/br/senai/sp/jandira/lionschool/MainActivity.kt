@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    LoginApp()
                 }
             }
         }
@@ -43,7 +43,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
+fun LoginApp() {
 
     val context = LocalContext.current.applicationContext
     val context2 = LocalContext.current
@@ -112,6 +112,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     LionSchoolTheme {
-        Greeting("Android")
+        LoginApp()
     }
 }
