@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.lionschool
+package br.senai.sp.jandira.lionschool.gui
 
 import android.content.Intent
 import android.os.Bundle
@@ -23,7 +23,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.senai.sp.jandira.lionschool.ui.theme.LionSchoolTheme
+import br.senai.sp.jandira.lionschool.R
+import br.senai.sp.jandira.lionschool.gui.theme.LionSchoolTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

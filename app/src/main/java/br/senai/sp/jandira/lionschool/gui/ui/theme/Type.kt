@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.lionschool.ui.theme
+package br.senai.sp.jandira.lionschool.gui.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
