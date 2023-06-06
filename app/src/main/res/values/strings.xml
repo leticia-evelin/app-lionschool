@@ -2,7 +2,7 @@
     <string name="app_name">Lion School</string>
     <string name="get_started">Get Started</string>
     <string name="choose_course">Escolha um curso para gerenciar</string>
-    <string name="status">Status</string>
+    <string name="status">Status:</string>
     <string name="studying">Cursando</string>
     <string name="finished">Finalizado</string>
     <string name="title_activity_home_activity.kt">HomeActivity.kt</string>

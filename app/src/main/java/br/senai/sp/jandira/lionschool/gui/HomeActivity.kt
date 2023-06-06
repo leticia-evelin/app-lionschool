@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.lionschool.gui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -136,7 +137,8 @@ fun HomeScreen() {
                             .width(170.dp)
                             .height(50.dp),
                             shape = RoundedCornerShape(12.dp),
-                            onClick = { /*TODO*/ },
+                            onClick = { val openNext = Intent(context, StudentsActivity::class.java)
+                                context.startActivity(openNext) },
 
                             colors = ButtonDefaults.buttonColors(Color(51, 71, 176),)
                         ) {
