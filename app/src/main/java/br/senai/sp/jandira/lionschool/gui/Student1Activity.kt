@@ -18,7 +18,7 @@ class Student1Activity : ComponentActivity() {
         setContent {
             LionSchoolTheme {
                 // A surface container using the 'background' color from the theme
-
+                intent.extras?.getString("nome")
                 intent.extras?.getString("foto")
                 intent.extras?.getString("matricula")
             }
