@@ -43,7 +43,7 @@ class StudentsActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                   StudentsApp()
+                    StudentsApp()
                 }
             }
         }
@@ -84,7 +84,7 @@ fun StudentsApp() {
         Row(
             modifier = Modifier
                 .fillMaxWidth(),
-                horizontalArrangement = Arrangement.Center
+            horizontalArrangement = Arrangement.Center
 
         ) {
 
@@ -131,8 +131,8 @@ fun StudentsApp() {
                 verticalArrangement = Arrangement.SpaceEvenly,
             ) {
 
-                val call = RetrofityFactory().getAlunosService().getAlunoCurso()
-                  //val call = RetrofityFactory().getAlunosService().getAlunosCurso("ds/todos")
+
+                val call = RetrofityFactory().getAlunosService().getAlunosCurso("ds")
 
                 call.enqueue(object : Callback<AlunosList> {
                     override fun onResponse(
@@ -155,27 +155,38 @@ fun StudentsApp() {
 
                 })
 
-                items(alunos){
-
-                    Card(modifier = Modifier
-                        .height(300.dp)
-                        .width(200.dp)
-                        , elevation = 15.dp,) {
-                        AsyncImage(model = it.foto, contentDescription = "foto")
-                        Text(text = it.nome, fontSize = 20.sp)
-
+                items(alunos) { aluno ->
+                    val backgroundColor = when (aluno.status) {
+                        "Cursando" -> Color(253, 219, 88)
+                        "Finalizado" -> Color(41, 88, 181)
+                        else -> Color.White
                     }
 
+                    Card(
+                        modifier = Modifier
+                            .height(330.dp)
+                            .width(250.dp)
+                            .padding(15.dp),
+                        elevation = 20.dp,
+                        backgroundColor = backgroundColor
+                    ) {
+                        AsyncImage(model = aluno.foto, contentDescription = "foto")
+                        Text(
+                            text = aluno.nome,
+                            fontSize = 20.sp,
+                            textAlign = TextAlign.Center,
+                            color = Color.White
+                        )
+                    }
                 }
+
             }
-
-
-
         }
 
 
-
     }
+
+
 
 
 }

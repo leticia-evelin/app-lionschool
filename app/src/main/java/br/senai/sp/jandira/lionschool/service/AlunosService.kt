@@ -3,6 +3,7 @@ package br.senai.sp.jandira.lionschool.service
 import br.senai.sp.jandira.lionschool.model.AlunosList
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface AlunosService {
@@ -11,8 +12,9 @@ interface AlunosService {
     fun getAlunos(): Call<AlunosList>
 
     @GET("alunos/{curso}")
-    fun getAlunosCurso(@Query("curso") curso: String): Call<AlunosList>
+    fun getAlunosssssCurso(@Query("curso") curso: String): Call<AlunosList>
 
-    @GET("alunos/rds/todos")
-    fun getAlunoCurso(): Call<AlunosList>
+    @GET("alunos/{curso}/todos")
+    fun getAlunosCurso(@Path("curso") curso: String): Call<AlunosList>
+
 }

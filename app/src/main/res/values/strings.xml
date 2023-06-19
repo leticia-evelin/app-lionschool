@@ -8,4 +8,5 @@
     <string name="title_activity_home_activity.kt">HomeActivity.kt</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_students">StudentsActivity</string>
+    <string name="title_activity_student1">Student1Activity</string>
 </resources>
